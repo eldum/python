@@ -1,6 +1,7 @@
 saldo = 100
 monto = int(input("retirar ->"))
 
+print(f"tu saldo es de {saldo}€")
 while monto >0:
     try:
         if monto > saldo:
