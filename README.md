@@ -1,8 +1,3 @@
-# Professional README Template
-
-[![License](https://img.shields.io/github/license/Your-Username/Your-Repository?style=flat)](https://choosealicense.com/)
-
-
 ### klk soy Duma
 
 Copiame el repositorio si quereis
