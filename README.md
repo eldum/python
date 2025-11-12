@@ -11,7 +11,7 @@ Copiame el repositorio si quereis
    <i>Si quereis seguirme</i>
    <br>
 <br>
-<a target="_blank" href="https://www.instagram.com/duma_07/"><img src="https://img.shields.io/badge/-Instragram-FF4088?style=for-the-badge&logo=Hugo&logoColor=white"></img></a>	
+<a target="_blank" href="https://www.instagram.com/duma_07/"><img src="https://img.shields.io/badge/-Insta-FF4088?style=for-the-badge&logo=instagram&logoColor=white"></img></a>	
 <a target="_blank" href="https://www.linkedin.com/in/rub%C3%A9n-duma-bba98233a/"><img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=Linkedin&logoColor=white"></img></a>
 <br>
 </p>
