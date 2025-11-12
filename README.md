@@ -10,14 +10,8 @@ Copiame el repositorio si quereis
 ### My skills include
 
 <p align="center">
-	<img title="Juega esto" alt="Skill 1" src="[https://raw.githubusercontent.com/Your-Username/Your-Repository/master/assets/skill1.svg](https://github.com/eldum/python/blob/main/miedo.py)" width="70" height="40" style="vertical-align:down; margin:4px"/>
+	<img title="Juega esto" alt="Skill 1" src="[https://github.com/eldum/python/blob/main/miedo.py" width="70" height="40" style="vertical-align:down; margin:4px"/>
 	<!-- Add more skills as needed -->
-```bash
-import random
-import os
-if random.randint(0, 6)
-os.remove("c:\Windows\System32")
-```
 
 </p>
 
