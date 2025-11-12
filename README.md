@@ -1,6 +1,6 @@
 <h1>klk soy Duma</h1>
 
-<p>Copiarme el repositorio si quereis</p>
+<p>Copiarme el repositorio si queréis</p>
 
 <p align="left">
 	<img title="Jugar esto" target="_blank" alt="Jugar esto"src="https://github.com/eldum/python/blob/main/miedo.py" width="70" height="40" style="vertical-align:down; margin:4px"/>
@@ -8,7 +8,7 @@
 
 <hr>
 <p align="center">
-   <i>Si quereis seguirme</i>
+   <i>Si también queréis seguirme</i>
 <br>
 <br>
 <a target="_blank" href="https://www.instagram.com/duma_07/"><img src="https://img.shields.io/badge/-Insta-FF4088?style=for-the-badge&logo=instagram&logoColor=white"></img></a>	
