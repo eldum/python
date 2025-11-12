@@ -3,7 +3,7 @@
 <p>Copiame el repositorio si quereis</p>
 
 <p align="left">
-	<img title="Juegar esto" target="_blank" alt="Juega esto" src="https://github.com/eldum/python/blob/main/miedo.py" width="70" height="40" style="vertical-align:down; margin:4px"/>
+	<img title="Jugar esto" target="_blank" alt="Juega esto" src="https://github.com/eldum/python/blob/main/miedo.py" width="70" height="40" style="vertical-align:down; margin:4px"/>
 </p>
 
 <hr>
