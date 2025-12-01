@@ -1,0 +1,4 @@
+2025-11-28 09:22:54 | FÁCIL | REY | PERDIDO | Errores: 6/6
+2025-12-01 11:26:26 | FÁCIL | GAS | GANADO | Errores: 3/6
+2025-12-01 11:26:59 | FÁCIL | PAN | GANADO | Errores: 3/6
+2025-12-01 11:32:01 | FÁCIL | AVE | GANADO | Errores: 0/6

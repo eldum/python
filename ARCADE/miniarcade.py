@@ -1,4 +1,5 @@
 import random
+from datetime import datetime
 #La dificultad secreta es la 5 <================================================
 #/\
 #||
@@ -6,6 +7,19 @@ import random
 #||
 #||
 #||
+
+# Archivo de registros en el mismo directorio
+def guardar_record(nivel, palabra, resultado, errores, intentos_max):
+    """Guarda una línea en record.txt con fecha, nivel, palabra, resultado y errores."""
+    fecha = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    linea = f"{fecha} | {nivel} | {palabra.upper()} | {resultado} | Errores: {errores}/{intentos_max}\n"
+
+    try:
+        with open("record.txt", "a", encoding="utf-8") as f:
+            f.write(linea)
+    except:
+        pass
+
 
 def jugar_ahorcado():
     palabras_facil = [
@@ -131,12 +145,14 @@ def jugar_ahorcado():
         # Comprobar victoria
         if all(c in letras_adivinadas for c in palabra):
             print("\n ¡Enhorabuena! Has adivinado la palabra:", palabra.upper())
+            guardar_record(nivel, palabra, "GANADO", errores, intentos_max)
             break
         
         # Comprobar derrota
         if errores >= intentos_max:
             print(dibujo[errores])
             print("\nHas perdido. La palabra era:", palabra.upper())
+            guardar_record(nivel, palabra, "PERDIDO", errores, intentos_max)
             break
 
         # entrada
@@ -165,10 +181,12 @@ def jugar_ahorcado():
             # toda la palabra
             if entrada == palabra:
                 print("\n ¡Enhorabuena! Has adivinado la palabra:", palabra.upper())
+                guardar_record(nivel, palabra, "GANADO", errores, intentos_max)
                 break
             else:
                 print(" Palabra incorrecta.")
                 errores += 1
+
 
 def main():
     """
@@ -179,7 +197,6 @@ def main():
     ║      AHORCADO - Juego Retro       ║
     ╚═══════════════════════════════════╝
     """)
-    
     while True:
         jugar_ahorcado()
         respuesta = input("\n¿Jugar otra vez? (s/n): ").strip().lower()
@@ -188,8 +205,6 @@ def main():
             break
         else:
             print("\n¡Prueba la dificultad secreta!!!!!!!!!!!!!!")
-
-        print("\n" + "="*40 + "\n")
 
 if __name__ == "__main__":
     main()
