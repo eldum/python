@@ -8,7 +8,6 @@ from datetime import datetime
 #||
 #||
 
-# Archivo de registros en el mismo directorio
 def guardar_record(nivel, palabra, resultado, errores, intentos_max):
     """Guarda una línea en record.txt con fecha, nivel, palabra, resultado y errores."""
     fecha = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -35,7 +34,8 @@ def jugar_ahorcado():
     palabras_dificil = [
         "computadora", "algoritmo", "programacion", "tecnologia",
         "informacion", "desarrollo", "laberinto", "misterioso",
-        "arquitectura", "extraordinario", "telecomunicaciones"
+        "arquitectura", "extraordinario", "telecomunicaciones",
+        "mamis"
     ]
     
     palabras_euskera = [
@@ -94,7 +94,7 @@ def jugar_ahorcado():
         ========="""
     ]
     
-    # Selección de dificultad
+    # dificultad
     print("\n=== SELECCIONA DIFICULTAD ===")
     print("1) Fácil (palabras cortas 3-4 letras)")
     print("2) Medio (palabras de 5-7 letras)")
@@ -124,7 +124,7 @@ def jugar_ahorcado():
             nivel = "VALENCIÀ"
             break
         else:
-            print("Opción inválida. Elige 1, 2, 3, 4.")
+            print("Opción invalida. Elige 1, 2, 3, 4")
     
     palabra = random.choice(palabras).lower()
     letras_adivinadas = set()
@@ -132,15 +132,15 @@ def jugar_ahorcado():
     errores = 0
 
     print(f"\n=== AHORCADO - Nivel {nivel} ===")
-    print("Adivina la palabra letra por letra, o intenta la palabra completa.\n")
+    print("Adivina la palabra letra por letra, o intenta la palabra completa\n")
     
     while True:
         # Mostrar estado actual
         palabra_mostrada = " ".join([c if c in letras_adivinadas else "_" for c in palabra])
         print(dibujo[errores])
-        print("Palabra: ", palabra_mostrada)
-        print(f"Letras usadas: {', '.join(sorted(letras_adivinadas)) if letras_adivinadas else '(ninguna)'}")
-        print(f"Intentos restantes: {intentos_max - errores}")
+        print("palabra: ", palabra_mostrada)
+        print(f"letras usadas: {', '.join(sorted(letras_adivinadas)) if letras_adivinadas else '(ninguna)'}")
+        print(f"intentos restantes: {intentos_max - errores}")
 
         # Comprobar victoria
         if all(c in letras_adivinadas for c in palabra):
@@ -151,7 +151,7 @@ def jugar_ahorcado():
         # Comprobar derrota
         if errores >= intentos_max:
             print(dibujo[errores])
-            print("\nHas perdido. La palabra era:", palabra.upper())
+            print("\nhas perdido la palabra era:", palabra.upper())
             guardar_record(nivel, palabra, "PERDIDO", errores, intentos_max)
             break
 
@@ -159,39 +159,36 @@ def jugar_ahorcado():
         entrada = input("\nIntroduce una letra (o la palabra completa): ").strip().lower()
         
         if not entrada:
-            print("  Entrada vacía. Intenta de nuevo.")
+            print("  entrada vacia. intenta de nuevo")
             continue
         
         # solo letra
         if len(entrada) == 1:
             if not entrada.isalpha():
-                print("Por favor, introduce una letra válida.")
+                print("porfa, introduce una letra valida")
                 continue
             if entrada in letras_adivinadas:
-                print("Ya probaste esa letra.")
+                print("ya probaste esa letra")
                 continue
             if entrada in palabra:
                 letras_adivinadas.add(entrada)
-                print("V ¡Bien! La letra está en la palabra.")
+                print("V ¡Bien Joder! La letra esta en la palabra")
             else:
                 letras_adivinadas.add(entrada)
                 errores += 1
-                print("X No está en la palabra.")
+                print("X No esta en la palabra")
         else:
             # toda la palabra
             if entrada == palabra:
-                print("\n ¡Enhorabuena! Has adivinado la palabra:", palabra.upper())
+                print("\n ¡enhorabuena! has adivinado la palabra:", palabra.upper())
                 guardar_record(nivel, palabra, "GANADO", errores, intentos_max)
                 break
             else:
-                print(" Palabra incorrecta.")
+                print(" palabra incorrecta")
                 errores += 1
 
 
 def main():
-    """
-    Función principal que permite jugar varias partidas.
-    """
     print("""
     ╔═══════════════════════════════════╗
     ║      AHORCADO - Juego Retro       ║
@@ -201,10 +198,10 @@ def main():
         jugar_ahorcado()
         respuesta = input("\n¿Jugar otra vez? (s/n): ").strip().lower()
         if respuesta != 's':
-            print("\n¡Hasta la proxima! ")
+            print("\nHasta la proxima ")
             break
         else:
-            print("\n¡Prueba la dificultad secreta!!!!!!!!!!!!!!")
+            print("\n¡Prueba la dificultad secreta!!!!!!!!!!!!!!!!!!!")
 
 if __name__ == "__main__":
     main()
